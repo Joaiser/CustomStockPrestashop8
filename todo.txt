@@ -1,0 +1,17 @@
+TODO - CustomStockDisplay:
+✅ MÓDULO FUNCIONAL EN TESTING
+
+PENDIENTE PRODUCCIÓN:
+- [] Poner un readme.md decente
+- [] Mejorar visualación/estilos del css del controlador.
+- [✅] Test en producción real
+- [ ] Verificar dobles llamadas JS (optimizar)
+- [✅] Quitar logs de debug para producción
+- [ ] Optimizar rendimiento si es necesario -> es necesario 
+- [ ] Documentar funcionamiento final
+- [✅]Hay que meterle boton para borrar registros de la tabla
+
+MEJORAS DETECTADAS:
+- A veces se ejecuta 2 veces el JS (optimizar)
+- Revisar posibles race conditions en AJAX
+-El día de mañana hacer un override y crear el propio tpl de stock para venta del modulo

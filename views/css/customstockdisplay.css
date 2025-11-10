@@ -1,0 +1,108 @@
+/* Estilos para el stock personalizado */
+.stock-dispo span {
+  color: #8abd38 !important;
+  font-weight: bold;
+}
+
+/* Estilo específico para stock con + */
+.stock-dispo span:contains("+") {
+  color: #8abd38 !important;
+  font-weight: bold;
+}
+
+.table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: #fff3cd !important;
+}
+
+#results_counter {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.hidden-row {
+  display: none;
+}
+
+.custom-stock-plus {
+  color: #8abd38 !important;
+  font-weight: bold !important;
+  font-size: inherit !important;
+}
+
+.stock-custom-display {
+  background-color: #f8fff8 !important;
+  padding: 2px 6px !important;
+  border-radius: 3px !important;
+  border: 1px solid #8abd38 !important;
+}
+
+.badge-info {
+  background-color: #17a2b8;
+  font-size: 10px;
+  padding: 2px 5px;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.product-reference small {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.custom-stock-display {
+  color: #8abd38 !important;
+  font-weight: bold !important;
+  font-size: 1.1em;
+}
+
+/* Para temas específicos de PrestaShop */
+.product-quantity.custom-stock-display,
+.stock.custom-stock-display,
+.qty.custom-stock-display {
+  background-color: #f8fff8;
+  padding: 2px 6px;
+  border-radius: 3px;
+  border-left: 3px solid #8abd38;
+}
+
+/* /views/css/customstockdisplay.css */
+.custom-stock-display {
+  color: #8abd38 !important;
+  font-weight: bold !important;
+}
+
+/* ESTILO PARA CUANDO EL STOCK ESTÁ LISTO */
+.stock-visible,
+.stock-visible .disponible,
+.stock-visible .stock-dispo,
+.stock-visible .product-dispo {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Ocultar inicialmente */
+.disponible,
+.stock-dispo,
+.product-dispo {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
