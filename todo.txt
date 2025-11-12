@@ -15,3 +15,19 @@ MEJORAS DETECTADAS:
 - A veces se ejecuta 2 veces el JS (optimizar)
 - Revisar posibles race conditions en AJAX
 -El día de mañana hacer un override y crear el propio tpl de stock para venta del modulo
+
+
+
+Estructura futura del modulo:
+classes/
+├── models/
+│   └── CustomStockModel.php
+├── repositories/
+│   └── CustomStockRepository.php
+├── services/
+│   ├── CustomStockService.php           # Lógica de negocio principal
+│   ├── CustomStockSearchService.php     # Búsqueda de productos
+│   └── CustomStockLogger.php            # Logging (aunque es más un utility)
+└── handlers/
+    ├── CustomStockAjaxHandler.php       # Manejo de AJAX
+    └── CustomStockHookHandler.php       # Manejo de hooks
