@@ -40,10 +40,26 @@ class AdminCustomStockDisplayController extends ModuleAdminController
     // Obtener el módulo
     $module = Module::getInstanceByName('customstockdisplay');
 
-
     $this->forceLog("🎯 MÓDULO: " . ($module ? "ENCONTRADO" : "NO ENCONTRADO"));
 
     if ($module) {
+      // ✅ CARGAR BOOTSTRAP MANUALMENTE
+      $this->context->controller->addCSS(
+        _PS_JS_DIR_ . 'jquery/plugins/bootstrap/css/bootstrap.min.css',
+        'all',
+        null,
+        false
+      );
+
+      // ✅ Cargar Bootstrap JS si es necesario
+      $this->context->controller->addJS(
+        _PS_JS_DIR_ . 'jquery/plugins/bootstrap/js/bootstrap.min.js',
+        false
+      );
+
+      // ✅ Cargar jQuery (por si acaso)
+      $this->context->controller->addJquery();
+
       // REGISTRAR CSS ESPECÍFICO
       $this->context->controller->addCSS(
         $module->getPathUri() . 'views/css/registered-products.css',

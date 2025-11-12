@@ -18,16 +18,5 @@ MEJORAS DETECTADAS:
 
 
 
-Estructura futura del modulo:
-classes/
-├── models/
-│   └── CustomStockModel.php
-├── repositories/
-│   └── CustomStockRepository.php
-├── services/
-│   ├── CustomStockService.php           # Lógica de negocio principal
-│   ├── CustomStockSearchService.php     # Búsqueda de productos
-│   └── CustomStockLogger.php            # Logging (aunque es más un utility)
-└── handlers/
-    ├── CustomStockAjaxHandler.php       # Manejo de AJAX
-    └── CustomStockHookHandler.php       # Manejo de hooks
+Estamos mezclando css del front con el admin en registered-products.css
+-> verificar y arreglar

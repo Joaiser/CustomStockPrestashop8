@@ -1,4 +1,4 @@
-<div class="panel">
+<div class="panel custom-stock-module">
   <div class="panel-heading">
     <i class="icon-cogs"></i> {$displayName} - Configuración de Stock Personalizado
   </div>
@@ -173,44 +173,3 @@
     </div>
   </div>
 </div>
-
-<style>
-  .table th {
-    background-color: #f5f5f5;
-    font-weight: bold;
-    position: sticky;
-    top: 0;
-  }
-
-  .table tbody tr:hover {
-    background-color: #f9f9f9;
-  }
-
-  .product-name {
-    font-weight: bold;
-  }
-
-  .highlight {
-    background-color: #fff3cd !important;
-  }
-
-  #results_counter {
-    margin: 10px 0;
-    font-weight: bold;
-  }
-
-  .loading {
-    opacity: 0.6;
-    pointer-events: none;
-  }
-
-  /* Estilos para pestañas */
-  .nav-tabs {
-    margin-bottom: 15px;
-  }
-
-  .badge {
-    margin-left: 5px;
-    background-color: #25b9d7;
-  }
-</style>

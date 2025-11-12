@@ -1,11 +1,183 @@
-/* Estilos para el stock personalizado */
-.stock-dispo span {
-  color: #8abd38 !important;
+/* ===== ESTILOS BASE ===== */
+.panel.custom-stock-module {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.panel.custom-stock-module .panel-heading {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 4px 4px 0 0;
+  font-size: 14px;
   font-weight: bold;
 }
 
-/* Estilo específico para stock con + */
-.stock-dispo span:contains("+") {
+.panel.custom-stock-module .panel-heading i {
+  margin-right: 5px;
+}
+
+/* ===== PESTAÑAS (Mismo estilo que registered-products) ===== */
+.panel.custom-stock-module .nav-tabs {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  background-color: #f8f9fa;
+  padding: 0 15px;
+}
+
+.panel.custom-stock-module .nav-tabs>li {
+  margin-bottom: -1px;
+}
+
+.panel.custom-stock-module .nav>li,
+.panel.custom-stock-module .nav>li>a {
+  position: relative;
+  display: block;
+}
+
+/* Pestaña activa */
+.panel.custom-stock-module .nav-tabs>li.active>a {
+  background-color: #fff !important;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  color: #555;
+  cursor: default;
+  z-index: 99;
+  margin-bottom: -1px;
+}
+
+.panel.custom-stock-module .nav-tabs>li.active>a:hover,
+.panel.custom-stock-module .nav-tabs>li.active>a:focus {
+  background-color: #fff !important;
+  border-color: #ddd;
+  border-bottom-color: transparent;
+  color: #555;
+}
+
+/* Pestañas inactivas */
+.panel.custom-stock-module .nav-tabs li a {
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.panel.custom-stock-module .nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.428571429;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  background-color: transparent;
+}
+
+.panel.custom-stock-module .nav-tabs>li>a:hover {
+  background-color: #e9ecef;
+  border-color: #dee2e6 #dee2e6 #ddd;
+  color: #555;
+}
+
+/* Iconos */
+.panel.custom-stock-module .nav-tabs i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+/* Badge en pestañas - NUEVO (mismo estilo circular) */
+.panel.custom-stock-module .nav-tabs .badge {
+  margin-left: 5px;
+  padding: 3px 6px;
+  /* Mismo padding horizontal y vertical */
+  background-color: white;
+  font-weight: normal;
+  border: 1px solid grey;
+  border-radius: 50%;
+  /* 50% para círculo perfecto */
+  width: 20px;
+  /* Ancho fijo */
+  height: 20px;
+  /* Alto fijo */
+  display: inline-flex;
+  /* o inline-block */
+  align-items: center;
+  /* Centrar verticalmente */
+  justify-content: center;
+  /* Centrar horizontalmente */
+  text-align: center;
+  line-height: 1;
+  /* Resetear line-height */
+  font-size: 11px;
+  /* Tamaño de fuente consistente */
+}
+
+/* CONTENIDO DE PESTAÑAS */
+.panel.custom-stock-module .tab-content {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 20px;
+  border-radius: 0 0 4px 4px;
+}
+
+.panel.custom-stock-module .tab-pane {
+  display: none;
+}
+
+.panel.custom-stock-module .tab-pane.active {
+  display: block;
+}
+
+/* ===== ALERTAS ===== */
+.panel.custom-stock-module .alert {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+}
+
+.panel.custom-stock-module .alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+
+.panel.custom-stock-module .alert i {
+  margin-right: 5px;
+}
+
+/* ===== BARRA DE HERRAMIENTAS ===== */
+.panel.custom-stock-module .panel.panel-default {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.panel.custom-stock-module .panel.panel-default .panel-heading {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ===== PANEL FOOTER ===== */
+.panel.custom-stock-module .panel-footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 0 0 4px 4px;
+}
+
+/* ===== ESTILOS EXISTENTES (mantener estos) ===== */
+
+/* Estilos para el stock personalizado */
+.stock-dispo span {
   color: #8abd38 !important;
   font-weight: bold;
 }
@@ -57,10 +229,6 @@
   padding: 2px 5px;
 }
 
-.product-name {
-  font-weight: bold;
-}
-
 .product-reference small {
   color: #6c757d;
   font-style: italic;
@@ -82,13 +250,7 @@
   border-left: 3px solid #8abd38;
 }
 
-/* /views/css/customstockdisplay.css */
-.custom-stock-display {
-  color: #8abd38 !important;
-  font-weight: bold !important;
-}
-
-/* ESTILO PARA CUANDO EL STOCK ESTÁ LISTO */
+/*<<-- esto es del front, sacarlo de aqui -->> */
 .stock-visible,
 .stock-visible .disponible,
 .stock-visible .stock-dispo,
@@ -98,11 +260,21 @@
   display: block !important;
 }
 
-/* Ocultar inicialmente */
+/* <<--- hasta aqui el front ->> */
 .disponible,
 .stock-dispo,
 .product-dispo {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
+}
+
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.badge {
+  margin-left: 5px;
+  background-color: #25b9d7;
 }

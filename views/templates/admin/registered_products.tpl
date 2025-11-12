@@ -1,9 +1,8 @@
-<div class="panel registered-products-page"> <!-- ← AÑADE ESTA CLASE -->
+<div class="panel custom-stock-module registered-products-page">
   <div class="panel-heading">
     <i class="icon-list"></i> {$displayName} - Productos con Configuración Personalizada
   </div>
 
-  <!-- PESTAÑAS -->
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation">
       <a href="{$admin_modules_url|escape:'html':'UTF-8'}" class="config-stock-link">
@@ -114,7 +113,6 @@
   </div>
 </div>
 
-<link rel="stylesheet" href="{$module_dir|escape:'html':'UTF-8'}views/css/registered-products.css?v={$smarty.now}">
 
 <script type="text/javascript">
   // Variables globales necesarias para el JS
